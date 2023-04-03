@@ -6,6 +6,7 @@ import { options } from "./swagger/config.js";
 import { PingRouter } from "./apis/pings/ping.router.js";
 import { BoardRouter } from "./apis/boards/board.router.js";
 import "dotenv/config";
+import { IndustryRouter } from "./apis/industrys/industry.router.js";
 
 const app = express();
 
@@ -27,10 +28,12 @@ app.use(
 // Router
 const pingRouter = new PingRouter().getRouter;
 const boardRouter = new BoardRouter().getRouter;
+const industryRouter = new IndustryRouter().getRouter;
 
 app.use("/", pingRouter);
 app.use("/board", boardRouter);
+app.use("/industry", industryRouter);
 
-console.log(app.get('env'));
+console.log(app.get("env"));
 
 export default app;
