@@ -8,8 +8,7 @@ services:
 
     volumes:
       - ./src:/myfolder/src
-      - ./src/app.js:/myfolder/src/app.js
-      - ./src/server.js:/myfolder/src/server.js
+
     ports:
       - 3000:3000
 

@@ -14,8 +14,8 @@ const knexfile = {
       max: 10,
     },
     migrations: {
-      tableName: "migrations",
-      directory: __dirname + '/apis/**/*entity.*'
+      tableName: "express_migrations",
+      // directory: __dirname + '/apis/**/*entity.*'
     },
   },
 };
